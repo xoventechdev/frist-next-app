@@ -6,6 +6,8 @@ const page = () => {
   return (
     <div className={css.description}>
       <h2 className={addCss.header}>Add Book</h2>
+
+      <img src={"/preview.jpg"} />
     </div>
   );
 };

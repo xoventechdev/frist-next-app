@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const productCaller = async () => {
@@ -15,6 +16,7 @@ const page = async () => {
           <div key={i}>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
+            <Link href={`/products?id=${item.id}`}>Edit</Link>
             <hr />
           </div>
         );

@@ -16,7 +16,9 @@ const page = async () => {
           <div key={i}>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            <Link href={`/products?id=${item.id}`}>Edit</Link>
+            <Link href={{ pathname: "/product/edit", query: { id: item.id } }}>
+              Edit
+            </Link>
             <hr />
           </div>
         );

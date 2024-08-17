@@ -105,3 +105,18 @@ a {
     color-scheme: dark;
   }
 }
+
+.activeMenu {
+  background: blueviolet !important;
+  color: #ffffff !important;
+}
+
+.inactiveMenu {
+  background: #ffffff !important;
+  color: blueviolet !important;
+}
+
+.inactiveMenu:hover {
+  background: blueviolet !important;
+  color: #ffffff !important;
+}

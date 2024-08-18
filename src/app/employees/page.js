@@ -26,12 +26,20 @@ const page = async () => {
               <td>{employee.id}</td>
               <td>{employee.employee_name}</td>
               <td>{employee.employee_salary}</td>
-              <td>
+              {/* <td>
                 <Link
                   href={{
                     pathname: "/employees/view",
                     query: { id: employee.id },
                   }}
+                  className="btn btn-primary"
+                >
+                  View
+                </Link>
+              </td> */}
+              <td>
+                <Link
+                  href={`/employees/${employee.id}`}
                   className="btn btn-primary"
                 >
                   View

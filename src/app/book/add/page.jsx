@@ -6,6 +6,10 @@ import Image from "next/image";
 import drYounus from "../../../../public/856577_159.jpg";
 import localFont from "next/font/local";
 
+const mainakFont = localFont({
+  src: "../../../assets/front/Mainak_Buniyadi_Unicode.ttf",
+});
+
 const page = () => {
   return (
     <div className={css.description}>
@@ -14,7 +18,7 @@ const page = () => {
         <div className="container">
           <div className="row text-center">
             <div className="col-6 p-2">
-              <card>
+              <card className={mainakFont.className}>
                 <div className="card-body">
                   <Image src={drYounus} alt="Dr Younus" placeholder="blur" />
                   <h2>সবকিছু সংস্কারের পরই দ্রুত নির্বাচন : ড. ইউনূস</h2>

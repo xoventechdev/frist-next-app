@@ -1,6 +1,14 @@
 import Link from "next/link";
 import React from "react";
 
+export const metadata = () => {
+  return {
+    title: "Employee Directory",
+    description: "A simple employee directory application using Next.js",
+    keywords: ["next.js", "react", "employee directory"],
+  };
+};
+
 const EmployeeList = async () => {
   const res = await fetch("https://dummy.restapiexample.com/api/v1/employees");
   const data = await res.json();
@@ -38,10 +46,7 @@ const page = async () => {
                 </Link>
               </td> */}
               <td>
-                <Link
-                  href={`/employees/${employee.id}`}
-                  className="btn btn-primary"
-                >
+                <Link href={`/post/${employee.id}`} className="btn btn-primary">
                   View
                 </Link>
               </td>

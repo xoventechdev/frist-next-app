@@ -58,3 +58,13 @@ const page = async ({ params }) => {
 };
 
 export default page;
+
+export const generateStaticParams = async () => {
+  const res = await fetch("https://dummy.restapiexample.com/api/v1/employees");
+  const data = await res.json();
+  const mainData = data.data;
+
+  return mainData.map((data) => ({
+    id: data.id.toString(),
+  }));
+};
